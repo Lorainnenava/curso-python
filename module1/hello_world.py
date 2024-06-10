@@ -33,3 +33,13 @@ print(myName)
 a= "hola"
 b= "como estas"
 print(a + b)
+
+print(6**2)
+a=True
+print(not a)
+
+print(3 * "hola")
+
+array=[1, 2, 3]
+for xd, i in enumerate(array):
+    print(xd,i)
