@@ -1,0 +1,514 @@
+[
+    {
+        "label": "pi",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "get_employee",
+        "kind": 2,
+        "importPath": "module1.example",
+        "description": "module1.example",
+        "peekOfCode": "def get_employee(id):\n    for employee in employee_list:\n        if employee[\"id\"] == id:\n            return employee\nprint(get_employee(12458))\n## OUTPUT\n{\"id\": 12458, \"name\": \"Paul\", \"department\": \"House Floor\"}\n# Ejemplo con diccionario\nemployee_dict = {\n    12345: {\"id\": \"12345\", \"name\": \"John\", \"department\": \"Kitchen\"},",
+        "detail": "module1.example",
+        "documentation": {}
+    },
+    {
+        "label": "get_employee_from_dict",
+        "kind": 2,
+        "importPath": "module1.example",
+        "description": "module1.example",
+        "peekOfCode": "def get_employee_from_dict(id):\n    return employee_dict[id]\nprint(get_employee_from_dict(12458))\n## OUTPUT\n{\"id\": 12458, \"name\": \"Paul\", \"department\": \"House Floor\"}\n# Ambas funcionan bien, pero el equilibrio a considerar es el tiempo y\n# la escala. La primera solución funcionará bien para cantidades pequeñas\n# de datos, pero pierde rendimiento a medida que los datos aumentan.\n# La segunda solución es más adecuada para grandes cantidades de datos,\n# ya que su estructura permite un tiempo de búsqueda constante y de ese",
+        "detail": "module1.example",
+        "documentation": {}
+    },
+    {
+        "label": "employee_list",
+        "kind": 5,
+        "importPath": "module1.example",
+        "description": "module1.example",
+        "peekOfCode": "employee_list = [\n    {\"id\": 12345, \"name\": \"John\", \"department\": \"Kitchen\"},\n    {\"id\": 12458, \"name\": \"Paul\", \"department\": \"House Floor\"},\n]\ndef get_employee(id):\n    for employee in employee_list:\n        if employee[\"id\"] == id:\n            return employee\nprint(get_employee(12458))\n## OUTPUT",
+        "detail": "module1.example",
+        "documentation": {}
+    },
+    {
+        "label": "employee_dict",
+        "kind": 5,
+        "importPath": "module1.example",
+        "description": "module1.example",
+        "peekOfCode": "employee_dict = {\n    12345: {\"id\": \"12345\", \"name\": \"John\", \"department\": \"Kitchen\"},\n    12458: {\"id\": \"12458\", \"name\": \"Paul\", \"department\": \"House Floor\"},\n}\ndef get_employee_from_dict(id):\n    return employee_dict[id]\nprint(get_employee_from_dict(12458))\n## OUTPUT\n{\"id\": 12458, \"name\": \"Paul\", \"department\": \"House Floor\"}\n# Ambas funcionan bien, pero el equilibrio a considerar es el tiempo y",
+        "detail": "module1.example",
+        "documentation": {}
+    },
+    {
+        "label": "say_hello",
+        "kind": 2,
+        "importPath": "module1.hello_world",
+        "description": "module1.hello_world",
+        "peekOfCode": "def say_hello():\n    print(\"Hello there!\")\nprint(say_hello())\nmyName= \"Lorainne\"\nprint(type(myName))\ndel myName # Elimina la variable\nprint(myName)\na= \"hola\"\nb= \"como estas\"\nprint(a + b)",
+        "detail": "module1.hello_world",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "module1.hello_world",
+        "description": "module1.hello_world",
+        "peekOfCode": "y = 1  +  2\nprint(y) #3\n# incorrecto\nx = 1 \n+ 2\nprint(x) #1\nf= 1 \\\n+ 2\nprint(f) #3\n# SANGRIA",
+        "detail": "module1.hello_world",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "module1.hello_world",
+        "description": "module1.hello_world",
+        "peekOfCode": "x = 1 \n+ 2\nprint(x) #1\nf= 1 \\\n+ 2\nprint(f) #3\n# SANGRIA\ndef say_hello():\n    print(\"Hello there!\")\nprint(say_hello())",
+        "detail": "module1.hello_world",
+        "documentation": {}
+    },
+    {
+        "label": "fn1",
+        "kind": 2,
+        "importPath": "module1.python_escope",
+        "description": "module1.python_escope",
+        "peekOfCode": "def fn1():\n    local_v = 5  # Enclosed scope\n    def fn2():\n        double = 2  # local scope\n        print(local_v)\n        print(double)\n        fn2()\nfn1()\nprint(my_global)  # Integrado scope",
+        "detail": "module1.python_escope",
+        "documentation": {}
+    },
+    {
+        "label": "my_global",
+        "kind": 5,
+        "importPath": "module1.python_escope",
+        "description": "module1.python_escope",
+        "peekOfCode": "my_global = 10\ndef fn1():\n    local_v = 5  # Enclosed scope\n    def fn2():\n        double = 2  # local scope\n        print(local_v)\n        print(double)\n        fn2()\nfn1()\nprint(my_global)  # Integrado scope",
+        "detail": "module1.python_escope",
+        "documentation": {}
+    },
+    {
+        "label": "file",
+        "kind": 5,
+        "importPath": "module2.files.python_file_handling",
+        "description": "module2.files.python_file_handling",
+        "peekOfCode": "file = open(\"test.txt\", \"r\")\ndata = file.readline()\nprint(data)\nfile.close()\n# Ejemplo\nwith open(\"test.txt\", \"r\") as file:\n    data = file.readline()\n    print(data)",
+        "detail": "module2.files.python_file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "module2.files.python_file_handling",
+        "description": "module2.files.python_file_handling",
+        "peekOfCode": "data = file.readline()\nprint(data)\nfile.close()\n# Ejemplo\nwith open(\"test.txt\", \"r\") as file:\n    data = file.readline()\n    print(data)",
+        "detail": "module2.files.python_file_handling",
+        "documentation": {}
+    },
+    {
+        "label": "read_file",
+        "kind": 2,
+        "importPath": "module2.files.test",
+        "description": "module2.files.test",
+        "peekOfCode": "def read_file(file_name):\n    try:\n        with open(file_name, \"r\") as file:\n            data = file.read()\n            print(data)\n        return data\n    except:\n        raise NotImplementedError()\n# Lee las multiples lineas del archivo y lo devuelve en una lista\ndef read_file_into_list(file_name):",
+        "detail": "module2.files.test",
+        "documentation": {}
+    },
+    {
+        "label": "read_file_into_list",
+        "kind": 2,
+        "importPath": "module2.files.test",
+        "description": "module2.files.test",
+        "peekOfCode": "def read_file_into_list(file_name):\n    try:\n        with open(file_name) as file:\n            data = file.readlines()\n        return data\n    except:\n        raise NotImplementedError()\n#  Obtiene la primera linea del file_contents y lo almacena en un nuevo archivo\ndef write_first_line_to_file(file_contents, output_filename):\n    try:",
+        "detail": "module2.files.test",
+        "documentation": {}
+    },
+    {
+        "label": "write_first_line_to_file",
+        "kind": 2,
+        "importPath": "module2.files.test",
+        "description": "module2.files.test",
+        "peekOfCode": "def write_first_line_to_file(file_contents, output_filename):\n    try:\n        first_line = file_contents.split('\\n')[0]\n        print(first_line, \"first_line\")\n        with open(output_filename, \"w\") as file:\n            file.write(first_line)\n    except:\n        raise NotImplementedError()\n# Lee el archivo y devuelve las lineas que sean pares\ndef read_even_numbered_lines(file_name):",
+        "detail": "module2.files.test",
+        "documentation": {}
+    },
+    {
+        "label": "read_even_numbered_lines",
+        "kind": 2,
+        "importPath": "module2.files.test",
+        "description": "module2.files.test",
+        "peekOfCode": "def read_even_numbered_lines(file_name):\n    try:\n        even_lines = []\n        with open(file_name, \"r\") as file:\n            for index, line in enumerate(file, start=1):\n                if index % 2 == 0:\n                    even_lines.append(line)\n        return even_lines\n    except:\n        raise NotImplementedError()",
+        "detail": "module2.files.test",
+        "documentation": {}
+    },
+    {
+        "label": "read_file_in_reverse",
+        "kind": 2,
+        "importPath": "module2.files.test",
+        "description": "module2.files.test",
+        "peekOfCode": "def read_file_in_reverse(file_name):\n    try:\n        with open(file_name, \"r\") as file:\n            lines = file.readlines()\n        reversed_lines = lines[::-1]\n        print(reversed_lines)\n        return reversed_lines\n    except:\n        raise NotImplementedError()\n'''",
+        "detail": "module2.files.test",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "module2.files.test",
+        "description": "module2.files.test",
+        "peekOfCode": "def main():\n    file_contents = read_file(\"sample.txt\")\n    print(read_file_into_list(\"sample.txt\"))\n    write_first_line_to_file(file_contents, \"online.txt\")\n    print(read_even_numbered_lines(\"sample.txt\"))\n    print(read_file_in_reverse(\"sample.txt\"))\nif __name__ == \"__main__\":\n    main()",
+        "detail": "module2.files.test",
+        "documentation": {}
+    },
+    {
+        "label": "divide_by",
+        "kind": 2,
+        "importPath": "module2.exceptions",
+        "description": "module2.exceptions",
+        "peekOfCode": "def divide_by(a, b):\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return 0\n    except Exception as e:\n        print(e, 'Something went wrong!')\nans = divide_by(10, 0)\nprint(ans)\n# FileNotFoundError",
+        "detail": "module2.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ans",
+        "kind": 5,
+        "importPath": "module2.exceptions",
+        "description": "module2.exceptions",
+        "peekOfCode": "ans = divide_by(10, 0)\nprint(ans)\n# FileNotFoundError\ntry:\n    with open('file_does_not_exist.txt', 'r') as file:\n        print(file.read())\nexcept:\n    print(\"Unable to locate file\")",
+        "detail": "module2.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "sum_of",
+        "kind": 2,
+        "importPath": "module2.python_args",
+        "description": "module2.python_args",
+        "peekOfCode": "def sum_of(*args):\n    sum = 0\n    for x in args:\n        sum += x\n    return sum\nprint(sum_of(1, 5, 6, 2))",
+        "detail": "module2.python_args",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_tax",
+        "kind": 2,
+        "importPath": "module2.python_function",
+        "description": "module2.python_function",
+        "peekOfCode": "def calculate_tax(bill, tax_rate):\n    return round((bill * tax_rate)) // 100.00\nprint(calculate_tax(25000, 15))",
+        "detail": "module2.python_function",
+        "documentation": {}
+    },
+    {
+        "label": "list",
+        "kind": 5,
+        "importPath": "module2.python_list",
+        "description": "module2.python_list",
+        "peekOfCode": "list = [1, 2, 3]\nlist.append(4)  # agrega uno al final\nlist.pop()  # elimina el item final\nprint(list)",
+        "detail": "module2.python_list",
+        "documentation": {}
+    },
+    {
+        "label": "set_a",
+        "kind": 5,
+        "importPath": "module2.python_sets_dictionary",
+        "description": "module2.python_sets_dictionary",
+        "peekOfCode": "set_a = {1, 2, 3, 4, 5, 5}\nset_a.add(6)\nprint(set_a)\nsample_dict = {1: \"coff\", 2: \"tee\"}\nfor item in sample_dict:\n    print(item)\nprint(sample_dict)\ntupla = (\"a\", 1)\nprint(tupla[0])",
+        "detail": "module2.python_sets_dictionary",
+        "documentation": {}
+    },
+    {
+        "label": "sample_dict",
+        "kind": 5,
+        "importPath": "module2.python_sets_dictionary",
+        "description": "module2.python_sets_dictionary",
+        "peekOfCode": "sample_dict = {1: \"coff\", 2: \"tee\"}\nfor item in sample_dict:\n    print(item)\nprint(sample_dict)\ntupla = (\"a\", 1)\nprint(tupla[0])",
+        "detail": "module2.python_sets_dictionary",
+        "documentation": {}
+    },
+    {
+        "label": "tupla",
+        "kind": 5,
+        "importPath": "module2.python_sets_dictionary",
+        "description": "module2.python_sets_dictionary",
+        "peekOfCode": "tupla = (\"a\", 1)\nprint(tupla[0])",
+        "detail": "module2.python_sets_dictionary",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_subtotal",
+        "kind": 2,
+        "importPath": "module2.task_module2",
+        "description": "module2.task_module2",
+        "peekOfCode": "def calculate_subtotal(order):\n    try:\n        print(\"Calculating bill subtotal...\")\n        subtotal = sum(item['price'] for item in order)\n        subtotal = round(subtotal, 2)\n        return subtotal\n    except:\n        raise NotImplementedError()\n\"\"\"Calcula el impuesto de un pedido\n    [IMPLÉMENTAME]",
+        "detail": "module2.task_module2",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_tax",
+        "kind": 2,
+        "importPath": "module2.task_module2",
+        "description": "module2.task_module2",
+        "peekOfCode": "def calculate_tax(subtotal):\n    try:\n        print(\"Calculating tax from subtotal...\")\n        tax = round(subtotal * 0.15, 2)\n        return tax\n    except:\n        raise NotImplementedError()\n\"\"\"Resume el pedido\n    [IMPLÉMENTAME]\n        1. Calcula el total (subtotal + impuesto) y guárdalo en una variable llamada total (redondeado a dos decimales).",
+        "detail": "module2.task_module2",
+        "documentation": {}
+    },
+    {
+        "label": "summarize_order",
+        "kind": 2,
+        "importPath": "module2.task_module2",
+        "description": "module2.task_module2",
+        "peekOfCode": "def summarize_order(order):\n    try:\n        print(order)\n        subtotal = calculate_subtotal(order)\n        tax = calculate_tax(subtotal)\n        total = round(subtotal + tax, 2)\n        names = [item[\"name\"] for item in order]\n        return names, total\n    except:\n        raise NotImplementedError()",
+        "detail": "module2.task_module2",
+        "documentation": {}
+    },
+    {
+        "label": "print_order",
+        "kind": 2,
+        "importPath": "module2.task_module2",
+        "description": "module2.task_module2",
+        "peekOfCode": "def print_order(order):\n    print(\"You have ordered \" + str(len(order)) + \" items\")\n    items = []\n    items = [item[\"name\"] for item in order]\n    print(items)\n    return order\n# This function is provided for you, and will display the menu\ndef display_menu():\n    print(\"------- Menu -------\")\n    for selection in menu:",
+        "detail": "module2.task_module2",
+        "documentation": {}
+    },
+    {
+        "label": "display_menu",
+        "kind": 2,
+        "importPath": "module2.task_module2",
+        "description": "module2.task_module2",
+        "peekOfCode": "def display_menu():\n    print(\"------- Menu -------\")\n    for selection in menu:\n        print(\n            f\"{selection}. {menu[selection]['name']: <9} | {\n                menu[selection]['price']: >5}\"\n        )\n    print()\n# This function is provided for you, and will create an order by prompting the user to select menu items\ndef take_order():",
+        "detail": "module2.task_module2",
+        "documentation": {}
+    },
+    {
+        "label": "take_order",
+        "kind": 2,
+        "importPath": "module2.task_module2",
+        "description": "module2.task_module2",
+        "peekOfCode": "def take_order():\n    display_menu()\n    order = []\n    count = 1\n    for i in range(3):\n        item = input(\"Select menu item number \" +\n                     str(count) + \" (from 1 to 5): \")\n        count += 1\n        order.append(menu[int(item)])\n    return order",
+        "detail": "module2.task_module2",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "module2.task_module2",
+        "description": "module2.task_module2",
+        "peekOfCode": "def main():\n    order = take_order()\n    print_order(order)\n    subtotal = calculate_subtotal(order)\n    print(\"Subtotal for the order is: \" + str(subtotal))\n    tax = calculate_tax(subtotal)\n    print(\"Tax for the order is: \" + str(tax))\n    summarize = summarize_order(order)\n    print(\"Summarize order is: \" + str(summarize))\nif __name__ == \"__main__\":",
+        "detail": "module2.task_module2",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "module2.task_module2",
+        "description": "module2.task_module2",
+        "peekOfCode": "menu = {\n    1: {\"name\": \"espresso\", \"price\": 1.99},\n    2: {\"name\": \"coffee\", \"price\": 2.50},\n    3: {\"name\": \"cake\", \"price\": 2.79},\n    4: {\"name\": \"soup\", \"price\": 4.50},\n    5: {\"name\": \"sandwich\", \"price\": 4.99},\n}\n\"\"\"Calcula el subtotal de un pedido\n    [IMPLÉMENTAME]\n        1. Suma los precios de todos los artículos en el pedido y devuelve la suma.",
+        "detail": "module2.task_module2",
+        "documentation": {}
+    },
+    {
+        "label": "cadena_example",
+        "kind": 5,
+        "importPath": "module3.algorithm",
+        "description": "module3.algorithm",
+        "peekOfCode": "cadena_example = \"ana\"\n# Invertir la cadena utilizando el operador de corte\nreverse_cadena_example = cadena_example[::-1]\nprint(reverse_cadena_example)\n# Comparar la cadena original con la invertida\nes_palindromo = cadena_example == reverse_cadena_example\nprint(es_palindromo)",
+        "detail": "module3.algorithm",
+        "documentation": {}
+    },
+    {
+        "label": "reverse_cadena_example",
+        "kind": 5,
+        "importPath": "module3.algorithm",
+        "description": "module3.algorithm",
+        "peekOfCode": "reverse_cadena_example = cadena_example[::-1]\nprint(reverse_cadena_example)\n# Comparar la cadena original con la invertida\nes_palindromo = cadena_example == reverse_cadena_example\nprint(es_palindromo)",
+        "detail": "module3.algorithm",
+        "documentation": {}
+    },
+    {
+        "label": "es_palindromo",
+        "kind": 5,
+        "importPath": "module3.algorithm",
+        "description": "module3.algorithm",
+        "peekOfCode": "es_palindromo = cadena_example == reverse_cadena_example\nprint(es_palindromo)",
+        "detail": "module3.algorithm",
+        "documentation": {}
+    },
+    {
+        "label": "bill_total",
+        "kind": 2,
+        "importPath": "module3.programacion_procedimental",
+        "description": "module3.programacion_procedimental",
+        "peekOfCode": "def bill_total(bill):\n    total = 0.00\n    for k, v in bill.items():\n        total += v\n    return total\ndef calculate_tax(percent, bill_total):\n    return round((percent * bill_total) / 100.0, 2)\nfood_total = bill_total(Food_bill)\ntax_total = calculate_tax(15, food_total)\nprint(food_total)",
+        "detail": "module3.programacion_procedimental",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_tax",
+        "kind": 2,
+        "importPath": "module3.programacion_procedimental",
+        "description": "module3.programacion_procedimental",
+        "peekOfCode": "def calculate_tax(percent, bill_total):\n    return round((percent * bill_total) / 100.0, 2)\nfood_total = bill_total(Food_bill)\ntax_total = calculate_tax(15, food_total)\nprint(food_total)\nprint(tax_total)",
+        "detail": "module3.programacion_procedimental",
+        "documentation": {}
+    },
+    {
+        "label": "Food_bill",
+        "kind": 5,
+        "importPath": "module3.programacion_procedimental",
+        "description": "module3.programacion_procedimental",
+        "peekOfCode": "Food_bill = {\n    1: 3.99,\n    2: 4.55,\n    3: 11.99\n}\ndef bill_total(bill):\n    total = 0.00\n    for k, v in bill.items():\n        total += v\n    return total",
+        "detail": "module3.programacion_procedimental",
+        "documentation": {}
+    },
+    {
+        "label": "food_total",
+        "kind": 5,
+        "importPath": "module3.programacion_procedimental",
+        "description": "module3.programacion_procedimental",
+        "peekOfCode": "food_total = bill_total(Food_bill)\ntax_total = calculate_tax(15, food_total)\nprint(food_total)\nprint(tax_total)",
+        "detail": "module3.programacion_procedimental",
+        "documentation": {}
+    },
+    {
+        "label": "tax_total",
+        "kind": 5,
+        "importPath": "module3.programacion_procedimental",
+        "description": "module3.programacion_procedimental",
+        "peekOfCode": "tax_total = calculate_tax(15, food_total)\nprint(food_total)\nprint(tax_total)",
+        "detail": "module3.programacion_procedimental",
+        "documentation": {}
+    },
+    {
+        "label": "find_coffee",
+        "kind": 2,
+        "importPath": "module3.python_maps_filters",
+        "description": "module3.python_maps_filters",
+        "peekOfCode": "def find_coffee(coffee):\n    if coffee[0] == \"c\":\n        return coffee\nmap_coffee = map(find_coffee, menu)\nfor x in map_coffee:\n    print(x)\ndef filter_coffee(coffee):\n    if coffee == \"c\":\n        return coffee\nfilter_coffee = filter(filter_coffee, menu)",
+        "detail": "module3.python_maps_filters",
+        "documentation": {}
+    },
+    {
+        "label": "filter_coffee",
+        "kind": 2,
+        "importPath": "module3.python_maps_filters",
+        "description": "module3.python_maps_filters",
+        "peekOfCode": "def filter_coffee(coffee):\n    if coffee == \"c\":\n        return coffee\nfilter_coffee = filter(filter_coffee, menu)\nfor x in filter_coffee:\n    print(x)",
+        "detail": "module3.python_maps_filters",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "module3.python_maps_filters",
+        "description": "module3.python_maps_filters",
+        "peekOfCode": "menu = [\"expresso\", \"moca\", \"latte\", \"capuccino\", \"cortado\", \"americano\"]\nexample = [{\"identificador\": 1, \"name\": \"ab\", \"status\": 1},\n           {\"identificador\": 2, \"name\": \"cd\", \"status\": 1}, {\"identificador\": 3, \"name\": \"cd\", \"status\": 2}]\nstatus_1 = [item for item in example if item[\"status\"] == 1]\nprint(status_1)\ndef find_coffee(coffee):\n    if coffee[0] == \"c\":\n        return coffee\nmap_coffee = map(find_coffee, menu)\nfor x in map_coffee:",
+        "detail": "module3.python_maps_filters",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 5,
+        "importPath": "module3.python_maps_filters",
+        "description": "module3.python_maps_filters",
+        "peekOfCode": "example = [{\"identificador\": 1, \"name\": \"ab\", \"status\": 1},\n           {\"identificador\": 2, \"name\": \"cd\", \"status\": 1}, {\"identificador\": 3, \"name\": \"cd\", \"status\": 2}]\nstatus_1 = [item for item in example if item[\"status\"] == 1]\nprint(status_1)\ndef find_coffee(coffee):\n    if coffee[0] == \"c\":\n        return coffee\nmap_coffee = map(find_coffee, menu)\nfor x in map_coffee:\n    print(x)",
+        "detail": "module3.python_maps_filters",
+        "documentation": {}
+    },
+    {
+        "label": "status_1",
+        "kind": 5,
+        "importPath": "module3.python_maps_filters",
+        "description": "module3.python_maps_filters",
+        "peekOfCode": "status_1 = [item for item in example if item[\"status\"] == 1]\nprint(status_1)\ndef find_coffee(coffee):\n    if coffee[0] == \"c\":\n        return coffee\nmap_coffee = map(find_coffee, menu)\nfor x in map_coffee:\n    print(x)\ndef filter_coffee(coffee):\n    if coffee == \"c\":",
+        "detail": "module3.python_maps_filters",
+        "documentation": {}
+    },
+    {
+        "label": "map_coffee",
+        "kind": 5,
+        "importPath": "module3.python_maps_filters",
+        "description": "module3.python_maps_filters",
+        "peekOfCode": "map_coffee = map(find_coffee, menu)\nfor x in map_coffee:\n    print(x)\ndef filter_coffee(coffee):\n    if coffee == \"c\":\n        return coffee\nfilter_coffee = filter(filter_coffee, menu)\nfor x in filter_coffee:\n    print(x)",
+        "detail": "module3.python_maps_filters",
+        "documentation": {}
+    },
+    {
+        "label": "filter_coffee",
+        "kind": 5,
+        "importPath": "module3.python_maps_filters",
+        "description": "module3.python_maps_filters",
+        "peekOfCode": "filter_coffee = filter(filter_coffee, menu)\nfor x in filter_coffee:\n    print(x)",
+        "detail": "module3.python_maps_filters",
+        "documentation": {}
+    },
+    {
+        "label": "string_reverse",
+        "kind": 2,
+        "importPath": "module3.reversal_str",
+        "description": "module3.reversal_str",
+        "peekOfCode": "def string_reverse(str):\n    if len(str) == 0:\n        return str\n    else:\n        return string_reverse(str[1:]) + str[0]\nstr = \"reversal\"\nreverse = string_reverse(str)\nprint(reverse)",
+        "detail": "module3.reversal_str",
+        "documentation": {}
+    },
+    {
+        "label": "cadena",
+        "kind": 5,
+        "importPath": "module3.reversal_str",
+        "description": "module3.reversal_str",
+        "peekOfCode": "cadena = \"sol\"\nprint(cadena[::-1])\n# Segundo ejemplo\ndef string_reverse(str):\n    if len(str) == 0:\n        return str\n    else:\n        return string_reverse(str[1:]) + str[0]\nstr = \"reversal\"\nreverse = string_reverse(str)",
+        "detail": "module3.reversal_str",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "module3.reversal_str",
+        "description": "module3.reversal_str",
+        "peekOfCode": "str = \"reversal\"\nreverse = string_reverse(str)\nprint(reverse)",
+        "detail": "module3.reversal_str",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "kind": 5,
+        "importPath": "module3.reversal_str",
+        "description": "module3.reversal_str",
+        "peekOfCode": "reverse = string_reverse(str)\nprint(reverse)",
+        "detail": "module3.reversal_str",
+        "documentation": {}
+    },
+    {
+        "label": "hanoi",
+        "kind": 2,
+        "importPath": "module3.torre_honay",
+        "description": "module3.torre_honay",
+        "peekOfCode": "def hanoi(disks, source, helper, destination):\n    # Base Condition\n    if (disks == 1):\n        print('Disk {} moves from tower {} to tower {}.'.format(\n            disks, source, destination))\n        return\n    # Recursive calls in which function calls itself\n    hanoi(disks - 1, source, destination, helper)\n    print('Disk {} moves from tower {} to tower {}.'.format(\n        disks, source, destination))",
+        "detail": "module3.torre_honay",
+        "documentation": {}
+    },
+    {
+        "label": "disks",
+        "kind": 5,
+        "importPath": "module3.torre_honay",
+        "description": "module3.torre_honay",
+        "peekOfCode": "disks = int(input('Number of disks to be displaced: '))\n'''\nTower names passed as arguments:\nSource: A\nHelper: B\nDestination: C\n'''\n# Actual function call\nhanoi(disks, 'A', 'B', 'C')",
+        "detail": "module3.torre_honay",
+        "documentation": {}
+    },
+    {
+        "label": "d",
+        "kind": 2,
+        "importPath": "testFinal",
+        "description": "testFinal",
+        "peekOfCode": "def d():\n    color = \"green\"\n    def e():\n        nonlocal color\n        color = \"yellow\"\n    e()\n    print(\"Color: \" + color)\n    color = \"red\"\ncolor = \"blue\"\nd()",
+        "detail": "testFinal",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "kind": 5,
+        "importPath": "testFinal",
+        "description": "testFinal",
+        "peekOfCode": "color = \"blue\"\nd()",
+        "detail": "testFinal",
+        "documentation": {}
+    }
+]
